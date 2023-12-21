@@ -1,0 +1,40 @@
+[color]
+    ui = true
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = red
+
+[help]
+    autocorrect = 1
+
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    br = branch
+    bra = branch --all
+    lga = log --decorate --stat --graph --pretty=format:\"%d %Cgreen%h%Creset (%ar - %Cred%an%Creset), %s%n\"
+    lg = log --decorate --graph --format='%Cgreen%h%Creset %ad %C(cyan)%an%Creset - %s%C(red)%d%Creset' --date=short
+    lb = log --graph --pretty=format:'%Cred%h%Creset - %C(bold blue)%an%Creset -%C(auto)%d%Creset %s %Cgreen(%cr)' --abbrev-commit
+    l = log --graph --pretty=format:'%Cred%h%Creset - %C(bold blue)%an%Creset -%C(auto)%d%Creset %s %Cgreen(%cr)' --abbrev-commit --all
+    ll = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)an>%Creset' --abbrev-commit
+    stat = shortlog -sne
+    oups = reset HEAD^
+
+[user]
+        name = [git name]
+        email = [your@email.com]
+
+[push]
+        autoSetupRemote = true
